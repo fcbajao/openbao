@@ -584,6 +584,7 @@ func (b *SystemBackend) configPaths() []*framework.Path {
 				logical.UpdateOperation: &framework.PathOperation{
 					DisplayAttrs: &framework.DisplayAttributes{
 						OperationVerb: "initialize",
+						OperationSuffix: "system",
 					},
 					Summary:     "Initialize a new OpenBao instance.",
 					Description: "The OpenBao instance must not have been previously initialized. The recovery options, as well as the stored shares option, are only available when using OpenBao HSM.",
